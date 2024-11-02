@@ -1,0 +1,55 @@
+.title-container {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    position: absolute;
+    top: 120px;
+    justify-content: center;
+    z-index: 2;
+}
+.container-image {
+    height: 25vh;
+    width: 100%;
+    object-fit: cover;
+    opacity: .6;
+}
+.title {
+    color: var(--pale-purple);
+    text-shadow: 1px 1px 2px var(--russian-violet-dark);
+}
+.animated-text {
+    color: var(--heliotrope);
+    margin-left: 10px;
+    text-shadow: 1px 1px 2px var(--russian-violet-dark);
+}
+.biography-container {
+    height: calc(100vh - 25vh - 4.05rem); /* Adjust height based on other elements above, if needed */
+    overflow-y: auto; /* Allows scrolling when content overflows */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in height calculation */
+    color: var(--pale-purple);
+    width: 60%;
+}
+
+.section {
+    height: 100%; /* Make section take the available height */
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.biography-container p {
+    margin-bottom: 1em; /* Space between paragraphs */
+}
+
+.biography-container br {
+    display: block;
+    margin: 0.5em 0; /* Space for line breaks */
+}
+.profile-picture {
+    width: 225px;
+    height: auto;
+    border-radius: 25px;
+    margin-top: 25px;
+    box-shadow: 0 4px 8px var(--french-violet);
+}

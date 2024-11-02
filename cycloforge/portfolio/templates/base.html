@@ -11,14 +11,19 @@
     <!-- Bulma CSS -->
     <link rel="stylesheet" href="{% static 'css\bulma\css\bulma.min.css' %}">
     <link rel="stylesheet" href="{% static 'css\main.css' %}">
+    <style>
+        html, body {
+            height: 100%; /* Ensure the body and html take full height */
+            margin: 0;
+            overflow: hidden; /* Prevent page scrolling, let inner containers handle scroll */
+        }
+    </style>
     {% block head %}
     {% endblock %}
 </head>
 {% include 'navbar.html' %}
 <body>
-    <div class="container mt-5">
         {% block content %}
         {% endblock %}
-    </div>
 </body>
 </html>

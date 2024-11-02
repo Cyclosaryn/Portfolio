@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let texts = ["Back-end developer.", "Front-end developer.", "Fullstack developer.", "Python developer.", "JavaScript developer.", "Django developer.", "NodeJS developer.", "Electron developer."];
-    
+    let texts = ["Back-end developer.", "Front-end developer.", "Fullstack developer.", "Python developer.", "JavaScript developer.", "Django developer.", "NodeJS developer.", "Electron developer.", "Michael Verbroekken."];
+
     // Function to shuffle the array
     function shuffle(array) {
         for (let i = array.length - 1; i > 0; i--) {
@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const typingSpeed = 50;
     const erasingSpeed = 10;
     const delayBetweenTexts = 2000;
+    const delayForLastText = 90000; // 1.5 minutes
     const animatedTextElement = document.getElementById('animated-text');
 
     function type() {
@@ -24,7 +25,11 @@ document.addEventListener('DOMContentLoaded', function() {
             charIndex++;
             setTimeout(type, typingSpeed);
         } else {
-            setTimeout(erase, delayBetweenTexts);
+            if (texts[index] === "Michael Verbroekken.") {
+                setTimeout(erase, delayForLastText);
+            } else {
+                setTimeout(erase, delayBetweenTexts);
+            }
         }
     }
 
