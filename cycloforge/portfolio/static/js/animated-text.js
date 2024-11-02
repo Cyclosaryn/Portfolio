@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let texts = ["Back-end developer.", "Front-end developer.", "Fullstack developer.", "Python developer.", "JavaScript developer.", "Django developer.", "NodeJS developer.", "Electron developer.", "Michael Verbroekken."];
+    let texts = ["Back-end developer.", "Front-end developer.", "Fullstack developer.", "Python developer.", "JavaScript developer.", "Django developer.", "NodeJS developer.", "Electron developer.", "DevOps", "Michael Verbroekken."];
 
     // Function to shuffle the array
     function shuffle(array) {
