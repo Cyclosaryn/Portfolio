@@ -1,0 +1,63 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "pipInstallAndMigrate",
+      "dependsOn": ["pipInstall", "migrate"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    },
+    {
+      "label": "pipInstall",
+      "type": "shell",
+      "osx": {
+        "command": "pip install -r requirements.txt"
+      },
+      "windows": {
+        "command": "${config:python.pythonPath} -m pip install -r requirements.txt"
+      },
+      "linux": {
+        "command": "${config:python.pythonPath}/bin/python -m pip install -r requirements.txt"
+      },
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+        "clear": true
+      }
+    },
+    {
+      "label": "migrate",
+      "type": "shell",
+      "dependsOn": "pipInstall",
+      "osx": {
+        "command": "python manage.py migrate"
+      },
+      "windows": {
+        "command": "${config:python.pythonPath} ${workspaceFolder}\\cycloforge\\manage.py migrate"
+      },
+      "linux": {
+        "command": "${config:python.pythonPath} ${workspaceFolder}\\cycloforge\\manage.py migrate"
+      },
+      "presentation": {
+        "echo": false,
+        "reveal": "silent",
+        "focus": false,
+        "panel": "shared",
+        "showReuseMessage": false,
+      }
+    }
+  ]
+}

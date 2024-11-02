@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Python: Django",
+            "type": "python",
+            "request": "launch",
+            "osx": {
+                "program": "manage.py"
+              },
+              "windows": {
+                "program": "${workspaceFolder}\\cycloforge\\manage.py",
+              },
+            "args": ["runserver", "localhost:8000"],
+            "django": true,
+            "justMyCode": true,
+            "preLaunchTask": "pipInstallAndMigrate"
+        }
+    ]
+}

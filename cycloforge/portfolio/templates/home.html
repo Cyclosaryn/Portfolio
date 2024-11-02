@@ -1,0 +1,17 @@
+<!-- portfolio/templates/portfolio/home.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+    <script src="{% static 'js/animated-text.js' %}"></script>
+{% endblock %}
+
+{% block content %}
+<section class="section">
+    <div class="title-container">
+        <h1 class="title">I am:</h1><h1 id="animated-text" class="title animated-text"></h1>
+    </div>
+    <p>subtext</p>
+</section>
+
+{% endblock %}

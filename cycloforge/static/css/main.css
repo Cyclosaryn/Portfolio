@@ -1,0 +1,44 @@
+:root {
+    --russian-violet-dark: #10002B;
+    --russian-violet: #240046;
+    --french-violet: #7B2CBF;
+    --heliotrope: #C77DFF;
+    --pale-purple: #F9EEFF;
+}
+.navbar {
+    box-shadow: 0 0px 15px -5px var(--pale-purple);
+}
+.brand-logo {
+    height: 40px !important;
+    max-height: none !important;
+    margin-right: -5px !important;
+}
+.navbar, .hero.is-primary {
+    background-color: var(--russian-violet-dark);
+    color: var(--pale-purple);
+}
+.navbar-item, .navbar-link {
+    color: var(--pale-purple);
+}
+.navbar-item:hover, .navbar-link:hover {
+    background-color: var(--french-violet);
+}
+.hero-body {
+    background-color: var(--russian-violet);
+    color: var(--pale-purple);
+}
+
+.navbar-divider {
+    border-left: 1px solid; height: 28px;
+    border-color: var(--pale-purple);
+}
+.title-container {
+    display: flex;
+}
+.title {
+    color: var(--pale-purple);
+}
+.animated-text {
+    color: var(--heliotrope);
+    margin-left: 10px;
+}
