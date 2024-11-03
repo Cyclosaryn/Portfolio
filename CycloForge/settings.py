@@ -28,7 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    'cycloforge.azurewebsites.net'
+    'cycloforge.azurewebsites.net',
+    'portfolio-pq45.onrender.com',
+    '169.254.129.3',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
