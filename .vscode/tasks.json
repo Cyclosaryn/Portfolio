@@ -46,10 +46,10 @@
         "command": "python manage.py migrate"
       },
       "windows": {
-        "command": "${config:python.pythonPath} ${workspaceFolder}\\cycloforge\\manage.py migrate"
+        "command": "${config:python.pythonPath} manage.py migrate"
       },
       "linux": {
-        "command": "${config:python.pythonPath} ${workspaceFolder}\\cycloforge\\manage.py migrate"
+        "command": "${config:python.pythonPath} manage.py migrate"
       },
       "presentation": {
         "echo": false,

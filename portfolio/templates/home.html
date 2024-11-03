@@ -14,7 +14,7 @@
 </div>
 <section class="section">
 <div class="profile-picture-container">
-    <img class="profile-picture" src="/media/{{ biography.profilepicture }}">
+    <img class="profile-picture" src="{{ MEDIA_URL }}{{ biography.profilepicture.url }}">
 </div>
 <div class="biography-container">
     {{ biography.bio|safe }}
