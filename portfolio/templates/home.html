@@ -14,7 +14,10 @@
 </div>
 <section class="section">
 <div class="profile-picture-container">
-    <img class="profile-picture" src="{{ MEDIA_URL }}{{ biography.profilepicture.url }}">
+    <img class="profile-picture" src="{% static "images/profilepicture.jpg" %}">
+    <!-- for future use when saving profile picture in storage folder
+        <img class="profile-picture" src="{{ MEDIA_URL }}{{ biography.profilepicture.url }}"> 
+    -->
 </div>
 <div class="biography-container">
     {{ biography.bio|safe }}
