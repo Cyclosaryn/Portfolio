@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block head %}
+    <link rel="stylesheet" href="{% static 'css\detailspage.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% endblock %}
+{% block content %}
+<div class="section">
+    <div class="project-detail">
+        {% if project.projectpicture %}
+        <div class="project-picture">
+            <img src="{{ project.projectpicture.url }}" alt="{{ project.name }}">
+    </div>
+        {% endif %}
+        <h1>{{ project.name }}</h1>
+        <div class="project-description">
+            {{ project.description|safe }}
+        </div>
+</div>
+{% endblock %}

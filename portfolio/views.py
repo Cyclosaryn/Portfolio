@@ -1,6 +1,6 @@
 # portfolio/views.py
 from django.shortcuts import render
-from .models import Biography
+from .models import Biography, Project
 from django.http import HttpResponse
 
 def health_check(request):
@@ -17,7 +17,19 @@ def home(request):
     return render(request, 'home.html', context)
 
 def projects(request):
-    return render(request, 'projects.html')
+    project = Project.objects.all().order_by('-created_at')
+    
+    context = {
+        'projects': project
+    }
+    return render(request, 'projects.html', context)
+
+def project_detail(request, id):
+    project = Project.objects.get(id=id)
+    context = {
+        'project': project
+    }
+    return render(request, 'project_detail.html', context)
 
 def contact(request):
     return render(request, 'contact.html')

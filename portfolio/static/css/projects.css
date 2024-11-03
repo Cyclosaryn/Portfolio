@@ -50,6 +50,7 @@
 .image img {
     display: block;
     object-fit: cover;
+    width: 200px;
 }
 
 .card:hover {

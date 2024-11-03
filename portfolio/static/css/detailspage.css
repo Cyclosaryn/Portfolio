@@ -1,0 +1,32 @@
+body {
+    overflow-y: auto !important;
+}
+.section {
+    display: flex;
+    justify-content: center;
+}
+.project-detail {
+    padding: 25px;
+    color: var(--dark-fonts);
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.project-detail h1 {
+    color: var(--dark-fonts);
+    font-size: 2.5rem;
+}
+.project-description p {
+    margin-bottom: 1em; /* Space between paragraphs */
+}
+.project-description br {
+    display: block;
+    margin: 0.5em 0; /* Space for line breaks */
+}
+.project-description pre {
+  background-color: #f3f4f6;
+  margin: 0;
+  padding: 0;
+  color: var(--dark-fonts);
+}

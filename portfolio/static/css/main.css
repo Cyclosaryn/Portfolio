@@ -1,5 +1,4 @@
 :root {
-  
     --pale-purple: #e3e1e6;
     --dark-blue: #2D3A47;
     --darker-blue: #1D2731;
@@ -8,7 +7,9 @@
     --highlight-hover: #7B2CBF;
     --heliotrope: #A179FF;
 }
-
+body {
+    font-family: "Source Sans Pro", sans-serif;
+}
 .brand-logo {
     height: 40px !important;
     max-height: none !important;

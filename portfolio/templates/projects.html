@@ -2,113 +2,39 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-    <link rel="stylesheet" href="{% static 'css\projects.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projects.css' %}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {% endblock %}
 {% block content %}
 <section class="section">
     <div class="container">
-        <div class="columns">
-            <div class="column">
+        <div class="columns is-multiline">
+            {% for project in projects %}
+            <div class="column is-one-fifth">
                 <div class="card shadow-lg is-cursor-pointer">
                     <div class="card-image cover-image is-overflow-hidden">
                         <figure class="image">
-                            <img src="{% static 'images/Logo-inverted.png' %}" alt="PDM Knowledge Portal">
+                            {% if project.projectpicture %}
+                                <img src="{{ MEDIA_URL }}{{ project.projectpicture.url }}" alt="{{ project.name|safe }}">
+                            {% else %}
+                                <img src="" alt="{{ project.name|safe }}">
+                            {% endif %}
                         </figure>
                     </div>
                     <div class="card-content">
                         <div class="content">
-                            <h3>PDM Portal</h3>
-                            <p>The PDM Portal is designed to be a dynamic, all-encompassing platform connecting colleagues, enabling seamless skill development, and facilitating efficient resource allocation across the organization.</p>
+                            <h3>{{ project.name|safe }}</h3>
+                            <p>{{ project.description|safe }}</p>
                         </div>
                     </div>
                     <footer class="card-footer">
-                        <a href="#" class="card-footer-item p-5 is-uppercase is-text-wide-1">
+                        <a href="{% url 'project_detail' project.id %}" class="card-footer-item p-5 is-uppercase is-text-wide-1">
                             Continue Reading
                         </a>
                     </footer>
                 </div>
             </div>
-            <div class="column">
-                <div class="card shadow-lg is-cursor-pointer">
-                    <div class="card-image cover-image is-overflow-hidden">
-                        <figure class="image">
-                            <img src="{% static 'images/tfd-bot.png' %}" alt="TFD-Bot">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <h3>TFD-Bot</h3>
-                            A Discord bot designed for games and quotes management, offering seamless community engagement.
-                        </div>
-                    </div>
-                    <footer class="card-footer has-background-white-bis">
-                        <a href="#" class="card-footer-item p-5 is-uppercase is-text-wide-1">
-                            Continue Reading
-                        </a>
-                    </footer>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card shadow-lg is-cursor-pointer">
-                    <div class="card-image cover-image is-overflow-hidden">
-                        <figure class="image">
-                            <img src="{% static 'images/harmonic-creator.png' %}" alt="HarmonicCreator">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <h3>HarmonicCreator</h3>
-                            HarmonicCreator allows users to make various calculations based on input from different models of slats for a pool cover. By leveraging advanced algorithms and user-friendly interfaces, HarmonicCreator simplifies the process of designing and evaluating pool covers, making it an essential tool for professionals in the industry.
-                        </div>
-                    </div>
-                    <footer class="card-footer has-background-white-bis">
-                        <a href="#" class="card-footer-item p-5 is-uppercase is-text-wide-1">
-                            Continue Reading
-                        </a>
-                    </footer>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card shadow-lg is-cursor-pointer">
-                    <div class="card-image cover-image is-overflow-hidden">
-                        <figure class="image">
-                            <img src="{% static 'images/blt-musicbot.png' %}" alt="BLT-MusicBot">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <h3>BLT-MusicBot</h3>
-                            A Discord bot that plays radio streams, bringing music and entertainment to your server.
-                        </div>
-                    </div>
-                    <footer class="card-footer has-background-white-bis">
-                        <a href="#" class="card-footer-item p-5 is-uppercase is-text-wide-1">
-                            Continue Reading
-                        </a>
-                    </footer>
-                </div>
-            </div>
-            <div class="column">
-                <div class="card shadow-lg is-cursor-pointer">
-                    <div class="card-image cover-image is-overflow-hidden">
-                        <figure class="image">
-                            <img src="{% static 'images/project-hermes.png' %}" alt="ProjectHermes">
-                        </figure>
-                    </div>
-                    <div class="card-content">
-                        <div class="content">
-                            <h3>ProjectHermes</h3>
-                            Hermes is a project in development designed to facilitate real-time collaboration on markdown files. It enables users within an organization to work together seamlessly, ensuring that everyone is on the same page. With Hermes, team members can edit, comment, and sync their changes instantly, making it easier to manage and share information efficiently. This tool is particularly useful for teams that need to maintain up-to-date documentation, share knowledge, and enhance overall productivity through effective communication and collaboration.
-                        </div>
-                    </div>
-                    <footer class="card-footer has-background-white-bis">
-                        <a href="#" class="card-footer-item p-5 is-uppercase is-text-wide-1">
-                            Continue Reading
-                        </a>
-                    </footer>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>
