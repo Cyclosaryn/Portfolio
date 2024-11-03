@@ -30,3 +30,13 @@ body {
   padding: 0;
   color: var(--dark-fonts);
 }
+
+@media screen and (max-width: 800px) {
+    .project-detail {
+        width: 100%;
+    }
+    .project-detail h1 {
+        font-size: 2rem;
+    }
+    
+}
