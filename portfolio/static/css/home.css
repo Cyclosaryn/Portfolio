@@ -53,3 +53,18 @@
     margin-top: 25px;
     box-shadow: 0 4px 8px var(--french-violet);
 }
+
+@media screen and (max-width: 800px) {
+    .biography-container {
+        width: 100%;
+        height: calc(100vh - 25vh - 8.05rem);
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .profile-picture {
+        width: 150px;
+        margin-left: 10px;
+    }
+    
+}
