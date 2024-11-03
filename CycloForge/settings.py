@@ -31,6 +31,7 @@ ALLOWED_HOSTS = [
     'cycloforge.azurewebsites.net',
     'portfolio-pq45.onrender.com',
     '169.254.129.3',
+    'www.cycloforge.nl',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
