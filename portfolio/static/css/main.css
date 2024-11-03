@@ -1,9 +1,12 @@
 :root {
-    --russian-violet-dark: #10002B;
-    --russian-violet: #240046;
-    --french-violet: #7B2CBF;
-    --heliotrope: #C77DFF;
-    --pale-purple: #F9EEFF;
+  
+    --pale-purple: #e3e1e6;
+    --dark-blue: #2D3A47;
+    --darker-blue: #1D2731;
+    --light-fonts: #E9ECEA;
+    --dark-fonts: #2D3A47;
+    --highlight-hover: #7B2CBF;
+    --heliotrope: #A179FF;
 }
 
 .brand-logo {
@@ -12,35 +15,32 @@
     margin-right: -5px !important;
 }
 
-.navbar, .hero.is-primary {
-    background-color: var(--russian-violet-dark);
-    color: var(--pale-purple);
+.navbar {
+    background-color: var(--dark-blue);
+    color: var(--light-fonts);
     position: sticky; /* Makes the navbar sticky */
     top: 0; /* Sticks the navbar to the top of the viewport */
     z-index: 100; /* Ensures the navbar is above other content */
+    box-shadow: 0 4px 8px #7B2CBF85; /* Adds a shadow to the navbar */
 }
-
 .navbar-item, .navbar-link {
-    color: var(--pale-purple);
+    color: var(--light-fonts);
 }
 
 .navbar-item:hover, .navbar-link:hover {
-    background-color: var(--french-violet);
+    background-color: var(--highlight-hover);
 }
-
-.hero-body {
-    background-color: var(--russian-violet);
-    color: var(--pale-purple);
-}
-
 .navbar-divider {
-    border-left: 1px solid; 
+    border-left: 2px solid; 
     height: 28px;
-    border-color: var(--pale-purple);
+    border-color: var(--highlight-hover);
 }
 .navbar-burger {
-    color: var(--pale-purple);
+    color: var(--light-fonts);
 }
 .navbar-burger:hover {
-    background-color: var(--french-violet);
+    background-color: var(--highlight-hover);
+}
+.is-active {
+    background-color: var(--darker-blue);
 }

@@ -5,14 +5,15 @@
     height: auto;
     max-height: 450px; /* Limits height for better uniformity */
     overflow: hidden; /* Ensures content does not overflow the card */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
 }
 
 .card {
     border-radius: 10px;
-    box-shadow: 0px 0px 0px 0px var(--pale-purple), 0 5px 10px -5px var(--pale-purple);
+    box-shadow: 0px 5px 10px var(--highlight-hover);
     transition: transform 0.3s ease;
-    background-color: var(--russian-violet);
-    color: var(--pale-purple);
+    background-color: var(--light-fonts);
+    color: var(--dark-fonts);
     height: 360px;
     overflow: hidden;
     display: flex;
@@ -38,6 +39,10 @@
     max-height: calc(1.5em * 7); /* Maximum height to match the line count */
 }
 
+.content h3 {
+    color: var(--dark-fonts) !important;
+}
+
 .card-image {
     padding: 10px;
 }
@@ -59,7 +64,7 @@
 /* Optional: Adjusting the card titles */
 .title.is-5 {
     margin-bottom: 15px;
-    color: var(--pale-purple);
+    color: var(--dark-fonts);
 }
 
 .card-container {
@@ -73,8 +78,12 @@
 }
 
 .card-footer a {
-    background-color: var(--french-violet);
-    color: var(--pale-purple);
+    background-color: var(--pale-purple);
+    color: var(--dark-fonts);
+}
+.card-footer a:hover {
+    background-color: var(--highlight-hover);
+    color: var(--light-fonts);
 }
 
 
