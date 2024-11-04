@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path, re_path
+from django.urls import path, re_path, include
 from portfolio import views
 from django.conf import settings
 from django.conf.urls.static import static
@@ -12,6 +12,7 @@ urlpatterns = [
     path('project/<int:id>/', views.project_detail, name='project_detail'),
     path('contact/', views.contact, name='contact'),
     path('health/', views.health_check, name='health'),
+    path('tinymce/', include('tinymce.urls')),
 ]
 
 if settings.DEBUG:

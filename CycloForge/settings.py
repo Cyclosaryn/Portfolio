@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
-import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -48,8 +47,9 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'portfolio',  # Added for portfolio app
-    'widget_tweaks',  # Added for Bulma styling forms\
+    'widget_tweaks',  # Added for Bulma styling forms
     'tinymce',  # Added for rich text editing
+    'fontawesomefree',  # Added for fontawesome icons
 ]
 
 MIDDLEWARE = [
@@ -145,3 +145,19 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+TINYMCE_DEFAULT_CONFIG = {
+    "height": "320px",
+    "width": "960px",
+    "menubar": "file edit view insert format tools table help",
+    "plugins": "advlist autolink lists link image charmap print preview anchor searchreplace visualblocks code,"
+    "fullscreen insertdatetime media table paste code help wordcount spellchecker",
+    "toolbar": "undo redo | bold italic underline strikethrough | fontselect fontsizeselect formatselect | alignleft,"
+    "aligncenter alignright alignjustify | outdent indent |  numlist bullist checklist | forecolor,"
+    "backcolor casechange permanentpen formatpainter removeformat | pagebreak | charmap emoticons |,"
+    "fullscreen  preview save print | insertfile image media pageembed template link anchor codesample |,"
+    "a11ycheck ltr rtl | showcomments addcomment code",
+    "custom_undo_redo_levels": 10,
+    "language": "en",  # To force a specific language instead of the Django current language.
+    "promotion": False,  # Set to True to enable the promotion widget.
+}
