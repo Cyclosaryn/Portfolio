@@ -31,14 +31,15 @@ DEBUG = os.getenv('DJANGO_DEBUG', 'False').lower() in ('true', '1', 't')
 
 ALLOWED_HOSTS = [
     'localhost',
-    'cycloforge.azurewebsites.net',
     'portfolio-pq45.onrender.com',
     '169.254.129.3',
     'www.cycloforge.nl',
 ]
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://cycloforge.azurewebsites.net',
+    'https://cycloforge.nl/',
+    'https://www.cycloforge.nl/',
+    'https://portfolio-pq45.onrender.com/',
 ]
 
 # Application definition
@@ -106,7 +107,6 @@ else:
             conn_max_age=600
         )
     }
-    DATABASES['default']['ENGINE'] = 'django.db.backends.postgresql'
 
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
