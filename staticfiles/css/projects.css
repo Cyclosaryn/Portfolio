@@ -42,7 +42,17 @@
 .content h3 {
     color: var(--dark-fonts) !important;
 }
-
+.content p {
+    color: var(--dark-fonts) !important;
+}
+.content strong {
+    color: var(--dark-fonts) !important;
+}
+.content code {
+    background-color: var(--pale-purple);
+    color: var(--dark-fonts);
+    font-weight: bold;
+}
 .card-image {
     padding: 10px;
     justify-content: center;

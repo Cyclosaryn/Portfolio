@@ -25,10 +25,18 @@ body {
     margin: 0.5em 0; /* Space for line breaks */
 }
 .project-description pre {
-  background-color: #f3f4f6;
-  margin: 0;
-  padding: 0;
-  color: var(--dark-fonts);
+    background-color: #f3f4f6;
+    margin: 0;
+    padding: 0;
+    color: var(--dark-fonts);
+}
+.project-description code {
+    background-color: var(--pale-purple);
+    color: var(--dark-fonts);
+    font-weight: bold;
+    }
+.project-description strong {
+    color: var(--dark-fonts);
 }
 
 @media screen and (max-width: 800px) {
