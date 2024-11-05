@@ -4,12 +4,15 @@ from django.core import serializers
 from portfolio.models import Biography, Project
 
 class Command(BaseCommand):
-    help = 'Copy all model entries to a JSON file'
+    help = 'Copy all model entries to JSON files'
 
     def handle(self, *args, **kwargs):
-        with open('db_backup.json', 'w') as f:
+        with open('biography_backup.json', 'w') as bio_file:
             data = serializers.serialize('json', Biography.objects.all())
-            f.write(data)
+            bio_file.write(data)
+        
+        with open('project_backup.json', 'w') as project_file:
             data = serializers.serialize('json', Project.objects.all())
-            f.write(data)
-        self.stdout.write(self.style.SUCCESS('Successfully copied database entries to db_backup.json'))
+            project_file.write(data)
+        
+        self.stdout.write(self.style.SUCCESS('Successfully copied database entries to JSON files'))

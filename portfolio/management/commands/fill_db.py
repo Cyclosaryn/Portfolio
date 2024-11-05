@@ -4,11 +4,17 @@ from django.core import serializers
 from portfolio.models import Biography, Project
 
 class Command(BaseCommand):
-    help = 'Fill the database with entries from a JSON file'
+    help = 'Fill the database with entries from JSON files'
 
     def handle(self, *args, **kwargs):
-        with open('db_backup.json', 'r') as f:
-            data = f.read()
+        with open('biography_backup.json', 'r') as bio_file:
+            data = bio_file.read()
             for obj in serializers.deserialize('json', data):
                 obj.save()
-        self.stdout.write(self.style.SUCCESS('Successfully filled database with entries from db_backup.json'))
+        
+        with open('project_backup.json', 'r') as project_file:
+            data = project_file.read()
+            for obj in serializers.deserialize('json', data):
+                obj.save()
+        
+        self.stdout.write(self.style.SUCCESS('Successfully filled database with entries from JSON files'))
