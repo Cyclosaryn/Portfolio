@@ -108,10 +108,6 @@ else:
         )
     }
 
-# Database
-# https://docs.djangoproject.com/en/5.1/ref/settings/#databases
-
-
 # Password validation
 # https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators
 
@@ -149,7 +145,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
-    BASE_DIR / 'Portfolio/static',
+    BASE_DIR / 'portfolio/static',
 ]
 
 STATIC_ROOT = BASE_DIR / 'staticfiles'
