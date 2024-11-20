@@ -88,8 +88,8 @@ TEMPLATES = [
 
 WSGI_APPLICATION = "CycloForge.wsgi.application"
 
-
-if DEBUG:
+ENVIRONMENT = os.getenv('ENVIRONMENT', 'development')
+if ENVIRONMENT == 'development':
     # Database
     # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
     DATABASES = {
