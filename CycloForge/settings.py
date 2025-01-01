@@ -151,9 +151,6 @@ STATICFILES_DIRS = [
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
-# Ensure whitenoise can find and serve your static files
-WHITENOISE_ROOT = STATIC_ROOT
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = Path('/media/data')
 
