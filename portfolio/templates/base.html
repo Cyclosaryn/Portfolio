@@ -1,21 +1,21 @@
 <!-- portfolio/templates/base.html -->
- {% load static %}
+{% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="{{ STATIC_URL }}images/CycloForge_Logo.ico">
+    <link rel="icon" href="{% static 'images/CycloForge_Logo.ico' %}">
     <title>CycloForge</title>
     <!-- Bulma CSS -->
-    <link rel="stylesheet" href="{{ STATIC_URL }}css\bulma\css\bulma.min.css">
-    <link rel="stylesheet" href="{{ STATIC_URL }}css\main.css">
+    <link rel="stylesheet" href="{% static 'css/bulma/css/bulma.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
     <style>
         html, body {
-            height: 100%; /* Ensure the body and html take full height */
+            height: 100%;
             margin: 0;
-            overflow: hidden; /* Prevent page scrolling, let inner containers handle scroll */
+            overflow: hidden;
         }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -27,7 +27,7 @@
 </head>
 {% include 'navbar.html' %}
 <body class="has-background-light">
-        {% block content %}
-        {% endblock %}
+    {% block content %}
+    {% endblock %}
 </body>
 </html>
