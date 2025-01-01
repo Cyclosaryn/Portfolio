@@ -2,18 +2,20 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-    <link rel="stylesheet" href="{{ STATIC_URL }}css/contact.css">
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
 {% endblock %}
 {% block content %}
 
 <div class="contact-details">
     <div class="logo-container">
-        <img src="{{ STATIC_URL }}images/CycloForge_Logo_pay-off.png" alt="Logo" class="logo">
+        <img src="{% static 'images/CycloForge_Logo_pay-off.png' %}" alt="Logo" class="logo">
     </div>
+    {% for contact in contacts %}
     <ul>
-        <li><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:info@cycloforge.nl">info@cycloforge.nl</a></li>
-        <li><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong> <a href="https://www.linkedin.com/in/michael-verbroekken/" target="_blank">Michael Verbroekken</a></li>
-        <li><strong><i class="fab fa-github"></i> GitHub:</strong> <a href="https://github.com/Cyclosaryn/" target="_blank">Cyclosaryn</a></li>
+        <li><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:{{ contact.email }}">{{ contact.email }}</a></li>
+        <li><strong><i class="fab fa-linkedin"></i> LinkedIn:</strong> <a href="{{ contact.linkedin }}" target="_blank">Michael Verbroekken</a></li>
+        <li><strong><i class="fab fa-github"></i> GitHub:</strong> <a href="{{ contact.github }}" target="_blank">Cyclosaryn</a></li>
     </ul>
+    {% endfor %}
 </div>
 {% endblock %}

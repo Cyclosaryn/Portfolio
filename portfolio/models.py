@@ -31,3 +31,11 @@ class ProjectForm(forms.ModelForm):
         widgets = {
             'description': TinyMCE(attrs={'cols': 80, 'rows': 30, 'plugins': 'fontawesome', 'toolbar': 'fontawesome'})
         }
+        
+class Contact(models.Model):
+    email = models.EmailField()
+    linkedin = models.URLField()
+    github = models.URLField()
+
+    def __str__(self):
+        return self.email
