@@ -2,12 +2,12 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-    <script src="{% static 'js/animated-text.js' %}"></script>
-    <link rel="stylesheet" href="{% static 'css\home.css' %}">
+    <script src="{{ STATIC_URL }}js/animated-text.js"></script>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css\home.css">
 {% endblock %}
 {% block content %}
 <div class="image-container">
-    <img class="container-image" src="{% static 'images/turned-gray-laptop-computer.jpg' %}">
+    <img class="container-image" src="{{ STATIC_URL }}images/turned-gray-laptop-computer.jpg">
 </div>
 <div class="title-container">
     <h1 class="title">I am:</h1><h1 id="animated-text" class="title animated-text"></h1>

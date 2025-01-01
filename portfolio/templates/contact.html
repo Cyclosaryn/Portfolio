@@ -2,13 +2,13 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block head %}
-    <link rel="stylesheet" href="{% static 'css/contact.css' %}">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/contact.css">
 {% endblock %}
 {% block content %}
 
 <div class="contact-details">
     <div class="logo-container">
-        <img src="{% static 'images/CycloForge_Logo_pay-off.png' %}" alt="Logo" class="logo">
+        <img src="{{ STATIC_URL }}images/CycloForge_Logo_pay-off.png" alt="Logo" class="logo">
     </div>
     <ul>
         <li><strong><i class="fas fa-envelope"></i> Email:</strong> <a href="mailto:info@cycloforge.nl">info@cycloforge.nl</a></li>
