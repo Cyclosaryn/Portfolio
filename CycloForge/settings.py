@@ -147,7 +147,7 @@ STATICFILES_DIRS = [
     BASE_DIR / 'portfolio/static',
 ]
 
-STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATIC_ROOT = Path('/media/data/staticfiles')
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
