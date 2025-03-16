@@ -16,32 +16,129 @@ body {
     margin-right: -5px !important;
 }
 
-.navbar {
-    background-color: var(--dark-blue);
-    color: var(--light-fonts);
-    position: sticky; /* Makes the navbar sticky */
-    top: 0; /* Sticks the navbar to the top of the viewport */
-    z-index: 100; /* Ensures the navbar is above other content */
-    box-shadow: 0 4px 8px #7B2CBF85; /* Adds a shadow to the navbar */
-}
-.navbar-item, .navbar-link {
-    color: var(--light-fonts);
+/* Navbar */
+.menu-card{
+    width: 300px;
+    background-color: var(--darker-blue);
+    border-radius: 10px 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 999;
 }
 
-.navbar-item:hover, .navbar-link:hover {
-    background-color: var(--highlight-hover);
+.menu-header{
+    border-radius: 10px 10px 10px 10px;
+    padding: 5px;
+    padding-bottom: 0px;
+    background-color: var(--dark-blue);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
 }
-.navbar-divider {
-    border-left: 2px solid; 
-    height: 28px;
-    border-color: var(--highlight-hover);
+.menu-header.expanded {
+    border-radius: 10px 10px 0px 0px;
 }
-.navbar-burger {
+.menu-h2{
     color: var(--light-fonts);
+    margin-left: 10px;
 }
-.navbar-burger:hover {
-    background-color: var(--highlight-hover);
+
+.menu-iconM{
+    font-size: 18px;
+    margin-left: 170px;
+    color: var(--highlight-hover);
+}
+
+.menu-icon{
+    margin-right: 8px;
+}
+
+.menu-body li{
+    transition: 1s all;
+    padding: 15px;
+    color: var(--light-fonts);
+    list-style: none;
+    display: block;
+    border-top-right-radius: 10px 10px;
+    border-bottom-right-radius: 10px 10px;
+}
+
+.menu-li:hover{
+    transition: 1s all;
+    color: var(--heliotrope);
+    background-color: var(--dark-blue);
+    border-radius: 0px 0px 0px 0px;
+    cursor: pointer;
+    padding: 20px;
 }
 .is-active {
+    color: var(--heliotrope)!important;
+    background-color: var(--dark-blue);
+    border-radius: 0px 0px 0px 0px !important;
+}
+.last:hover {
+    border-bottom-left-radius: 10px!important;
+    border-bottom-right-radius: 10px!important;
+}
+.menu-body > li{
+    float: left;
+}
+
+.menu-body li ul{
+    background: var(--darker-blue);
+    margin-left: 300px;
+    margin-top: -38px;
+    display: none;
+    width: max-content;
+    position: absolute;
+    left: -10px;
+    border-top-right-radius: 15px 15px;
+    border-bottom-right-radius: 15px 15px;
+
+}
+.menu-body.show {
+    display: block;
+}
+.menu-body li:hover > ul{
+    display: block;
+    cursor: pointer;
+    
+}
+.iconM {
+    margin-right: 15px;;
+}
+.menu-body {
+    display: none;
+}
+.menu-body.show {
+    display: block;
+}
+.navbar-item {
+    padding: 0px;
+}
+.menu-body li ul li {
+    margin: 0;
+    color: var(--light-fonts);
     background-color: var(--darker-blue);
+    list-style: none;
+    display: block;
+    border-radius: 10px;
+}
+.menu-body li ul li:hover {
+    color: var(--heliotrope);
+    background-color: var(--dark-blue);
+    cursor: pointer;
+}
+.menu-lu{
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
+}
+.menu-lu:hover{
+    transition: 1s all;
+    color: var(--heliotrope);
+    background-color: var(--dark-blue);
+    border-radius: 0px 10px 10px 0px;
+    cursor: pointer;
 }

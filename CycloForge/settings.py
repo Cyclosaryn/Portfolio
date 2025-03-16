@@ -52,6 +52,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     'portfolio',  # Added for portfolio app
+    'hermes',  # Added for hermes app
     'widget_tweaks',  # Added for Bulma styling forms
     'tinymce',  # Added for rich text editing
     'fontawesomefree',  # Added for fontawesome icons
@@ -145,6 +146,7 @@ USE_TZ = True
 STATICFILES_DIRS = [
     BASE_DIR / 'static',
     BASE_DIR / 'portfolio/static',
+    BASE_DIR / 'hermes/static',
 ]
 
 STATIC_ROOT = Path('/media/data/staticfiles')

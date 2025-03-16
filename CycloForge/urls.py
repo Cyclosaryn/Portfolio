@@ -13,6 +13,7 @@ urlpatterns = [
     path('contact/', views.contact, name='contact'),
     path('health/', views.health_check, name='health'),
     path('tinymce/', include('tinymce.urls')),
+    path('hermes/', include('hermes.urls')),
 ]
 
 if settings.DEBUG:

@@ -1,45 +1,16 @@
 {% load static %}
-<nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-            <img class="brand-logo" src="{% static 'images/CycloForge_Logo.png' %}" alt="Logo">
-            <p>CycloForge</p>
-            <div class="navbar-divider"></div>
+
+<div class="menu-card">
+    <div class="menu-header" onclick="document.querySelector('.menu-body').classList.toggle('show'); this.classList.toggle('expanded');">
+        <a href="/" onclick="event.stopPropagation();">
+            <img src="{% static 'images/CycloForge_Logo.png' %}" alt="CycloForge" class="brand-logo">
         </a>
-        
-        <!-- Burger icon for mobile -->
-        <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarBasic">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
+        <h3 class="menu-h2">Menu</h3>
+        <i class="fas fa-angle-down iconM"></i>
     </div>
-
-    <div id="navbarBasic" class="navbar-menu">
-        <div class="navbar-start">
-            <a class="navbar-item" href="/">
-                Home
-            </a>
-            <a class="navbar-item" href="/projects">
-                Projects
-            </a>
-            <a class="navbar-item" href="/contact">
-                Contact
-            </a>
-        </div>
+    <div class="menu-body">
+        <ul>
+            {% include 'menuentries.html' %}
+        </ul>
     </div>
-</nav>
-
-<script>
-    // JavaScript for toggling the mobile menu
-    document.addEventListener('DOMContentLoaded', () => {
-        const burgerIcon = document.querySelector('.navbar-burger');
-        const navbarMenu = document.querySelector('#navbarBasic');
-
-        burgerIcon.addEventListener('click', () => {
-            burgerIcon.classList.toggle('is-active');
-            navbarMenu.classList.toggle('is-active');
-        });
-    });
-</script>
+</div>

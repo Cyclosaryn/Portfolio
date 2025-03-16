@@ -1,0 +1,67 @@
+<!-- portfolio/templates/hermes/hermeshome.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<style>
+    .construction-container {
+        text-align: center;
+        padding: 4rem 1rem;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .construction-icon {
+        font-size: 4rem;
+        color: #ffc107;
+        margin-bottom: 2rem;
+    }
+    .coming-soon {
+        font-size: 2.5rem;
+        color: #333;
+        margin-bottom: 1rem;
+    }
+    .description {
+        color: #666;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    .features-list {
+        text-align: left;
+        display: inline-block;
+        margin: 2rem 0;
+    }
+    .features-list li {
+        margin: 0.5rem 0;
+        color: #555;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="construction-container">
+    <div class="construction-icon">
+        <i class="fas fa-tools"></i>
+    </div>
+    <h1 class="coming-soon">Coming Soon: Hermes ATS</h1>
+    <p class="description">
+        We're building a powerful applicant tracking system to streamline your recruitment process.
+    </p>
+    <div class="features-list">
+        <h3>What to expect:</h3>
+        <ul>
+            <li>📋 Streamlined candidate management</li>
+            <li>📊 Advanced analytics and reporting</li>
+            <li>🤝 Collaborative hiring workflow</li>
+            <li>📱 Mobile-friendly interface</li>
+            <li>🔍 Smart candidate screening</li>
+        </ul>
+    </div>
+    {% for contact in contacts %}
+    <p>
+        Stay tuned for the launch! For updates, follow us on 
+        <a href="{{ contact.linkedin }}" class="text-primary"><i class="fab fa-linkedin"></i> LinkedIn</a> or 
+        <a href="{{ contact.github }}" class="text-primary"><i class="fab fa-github"></i> GitHub</a>.
+    </p>
+    {% endfor %}
+</div>
+{% endblock %}
